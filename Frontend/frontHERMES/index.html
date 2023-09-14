@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website tifHERMES | para tifHERMES</title>
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <span class="hamburger-btn material-symbols-rounded">menu</span>
+            <a href="#" class="logo">
+                <img src="images/logo.jpg" alt="logo">
+                <h2>HERMES</h2>
+            </a>
+            <ul class="links">
+                <li><span class="close-btn material-symbols-rounded">close</span></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Portfolios</a></li>
+                <li><a href="#">presentacion</a></li>
+                <li><a href="#">Acerca de Hermes</a></li>
+                <li><a href="#">Contactos</a></li>
+            </ul>
+            
+            <button class="login-btn">LOG IN</button>
+        </nav>
+    </header>
+
+    <div class="blur-bg-overlay"></div>
+    <div class="form-popup">
+        <span class="close-btn material-symbols-rounded">close</span>
+        <div class="form-box login">
+            <div class="form-details">
+                <h2>Bienvenido</h2>
+                <p>Ingresa tus datos para estar conectados.</p>
+            </div>
+            <div class="form-content">
+                <h2>LOGIN</h2>
+                <form action="#">
+                    <div class="input-field">
+                        <label for="email-login">Ingresa tu Email</label>
+                        <input type="text" id="email-login" required>
+                    </div>
+                    <div class="input-field">
+                        <label for="password-login">Password</label>
+                        <input type="password" id="password-login" required>
+                    </div>
+                    
+                    <a href="#" class="forgot-pass-link">Olvidaste tu password?</a>
+                    <button type="submit">Log In</button>
+                </form>
+                <div class="bottom-link">
+                    No tienes una Cuenta?
+                    <a href="#" id="signup-link">Sign Up</a>
+                </div>
+            </div>
+            </div>
+            <div class="form-box signup">
+                <div class="form-details">
+                    <h2>Crea tu Cuenta</h2>
+                    <p>Para formar parte de nuestra comunidad, regístrese utilizando su información personal.</p>
+                </div>
+                <div class="form-content">
+                    <h2>SIGNUP</h2>
+                    <form action="#">
+                        <div class="input-field">
+                            <label for="email-signup">Ingresa tu email</label>
+                            <input type="text" id="email-signup" required>
+                        </div>
+                        <div class="input-field">
+                            <label for="password-signup">Crea tu password</label>
+                            <input type="password" id="password-signup" required>
+                        </div>
+                        <div class="policy-text">
+                            <input type="checkbox" id="policy-signup">
+                            <label for="policy-signup">
+                                Acepto
+                                <a href="#" class="option">Términos & Condiciones</a>
+                            </label>
+                        </div>
+                        <button type="submit">Sign Up</button>
+                    </form>
+                    <div class="bottom-link">
+                        ¿Ya tienes una cuenta?
+                        <a href="#" id="login-link">Iniciar sesión</a>
+                    </div>
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+</body>
+</html>
