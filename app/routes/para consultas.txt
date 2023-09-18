@@ -1,0 +1,30 @@
+------auth_bp.route('/login', methods=['POST'])(UsuarioController.login) OKOKOK
+
+## para login (tener en DB) ### probar con otra contraseña para que muestre el error
+
+{
+    "correo_electronico" : "user0@gmail.com", 
+    "contrasena" : "123*&cero"
+}
+
+-----auth_bp.route('/logout', methods=['GET'])(UsuarioController.logout) OKOKOK
+
+###cuando se ejecuta la url borra el cookie en postman y muestra el mje de sesion cerrada
+
+
+-----auth_bp.route('/register', methods=['POST'])(UsuarioController.crear_usuario)
+
+## ('/register', methods=['POST']) para registrar un usuario  OKOKOK
+
+## cuando el correo_electronico ya existe sale mje de correo registrado
+
+{
+    "nombre_usuario" : "FER BARROSO",
+    "correo_electronico" : "ferbarr@gmail.com", 
+    "contrasena" : "anda951*"
+
+}
+
+-----auth_bp.route('/get_user/<int:usuario_id>', methods=['GET'])(UsuarioController.get_user) OKOKOK
+
+## trae los usuarios y los muestra con un json
