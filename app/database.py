@@ -33,9 +33,7 @@ class DatabaseConnection:
             for i, column in enumerate(cursor.description):
                 column_name = column[0]
                 value = result[i]
-                # Verificar si el valor es de tipo bytes (datos binarios)
                 if isinstance(value, bytes):
-                    # Convertir los datos binarios a base64
                     value = base64.b64encode(value).decode('utf-8')
                 processed_result[column_name] = value
             processed_results.append(processed_result)
@@ -72,7 +70,6 @@ class DatabaseConnection:
             print("callproc ejecutado exitosamente")
             return cursor
         except mysql.connector.Error as err:
-            # Manejar errores de MySQL aquí
             print(f"Error ejecutando el procedimiento almacenado: {err}")
         finally:
             cursor.close()
