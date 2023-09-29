@@ -1,0 +1,68 @@
+[
+    {
+        "Usuario": 1,
+        "Datos": {
+            "nombre_usuario": "Maurez7",
+            "correo_electronico": "gomezmauroleonel3@gmail.com",
+            "contrasena": "Masterking7+",
+            "fecha_nacimiento": "2001-09-14",
+            "nombre": "Mauro",
+            "apellido": "Gomez"
+        }
+    },
+    {
+        "Usuario": 2,
+        "Datos": {
+            "nombre_usuario": "Franchesco",
+            "correo_electronico": "dadsadad@gmail.com",
+            "contrasena": "123456",
+            "fecha_nacimiento": "2001-09-14",
+            "nombre": "Francisco",
+            "apellido": "Liendro"
+        }
+    },
+    {
+        "Usuario": 3,
+        "Datos": {
+            "nombre_usuario": "Raul777",
+            "correo_electronico": "raulrios9877@gmail.com",
+            "contrasena": "raul789001",
+            "fecha_nacimiento": "1982-06-10",
+            "nombre": "Raul",
+            "apellido": "Alfonsin"
+        }
+    },
+    {
+        "Usuario": 4,
+        "Datos": {
+            "nombre_usuario": "Jeipe22",
+            "correo_electronico": "jeipe990we@gmail.com",
+            "contrasena": "juanpaa22+",
+            "fecha_nacimiento": "2003-02-07",
+            "nombre": "Juan",
+            "apellido": "Echeverria"
+        }
+    },
+    {
+        "Usuario": 11,
+        "Datos": {
+            "nombre_usuario": "FBarroso",
+            "correo_electronico": "ferda@gmail.com",
+            "contrasena": "Fer17",
+            "fecha_nacimiento": "1988-01-17",
+            "nombre": "Fernando ",
+            "apellido": "Barroso"
+        }
+    },
+    {
+        "Usuario": 18,
+        "Datos": {
+            "nombre_usuario": "daniel2130",
+            "correo_electronico": "daniel@cualquiera.com",
+            "contrasena": "dani731",
+            "fecha_nacimiento": "2023-09-26",
+            "nombre": "Daniel",
+            "apellido": "jjjj"
+        }
+    }
+]
