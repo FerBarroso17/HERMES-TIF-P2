@@ -66,7 +66,6 @@ class CustomException(Exception):
         response.status_code = self.status_code
         return response
 
-##from .exeptions import CustomException
 
 class FilmNotFound(CustomException):
     def __init__(self, film_id):
