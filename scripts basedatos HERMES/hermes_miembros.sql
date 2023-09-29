@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 8.0.34, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.33, for Win64 (x86_64)
 --
--- Host: 127.0.0.1    Database: hermes
+-- Host: localhost    Database: hermes
 -- ------------------------------------------------------
--- Server version	8.0.34
+-- Server version	8.0.33
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -16,32 +16,32 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `canales`
+-- Table structure for table `miembros`
 --
 
-DROP TABLE IF EXISTS `canales`;
+DROP TABLE IF EXISTS `miembros`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `canales` (
-  `canal_id` int NOT NULL AUTO_INCREMENT,
-  `nombre_canal` varchar(30) NOT NULL,
+CREATE TABLE `miembros` (
+  `miembro_id` int NOT NULL AUTO_INCREMENT,
+  `usuario_id` int NOT NULL,
   `servidor_id` int NOT NULL,
-  `propietario_id` int NOT NULL,
-  PRIMARY KEY (`canal_id`),
+  `fecha_unirse` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`miembro_id`),
+  KEY `usuario_id` (`usuario_id`),
   KEY `servidor_id` (`servidor_id`),
-  KEY `propietario_id` (`propietario_id`),
-  CONSTRAINT `canales_ibfk_1` FOREIGN KEY (`servidor_id`) REFERENCES `servidores` (`servidor_id`),
-  CONSTRAINT `canales_ibfk_2` FOREIGN KEY (`propietario_id`) REFERENCES `usuarios` (`usuario_id`)
+  CONSTRAINT `miembros_ibfk_1` FOREIGN KEY (`usuario_id`) REFERENCES `usuarios` (`usuario_id`),
+  CONSTRAINT `miembros_ibfk_2` FOREIGN KEY (`servidor_id`) REFERENCES `servidores` (`servidor_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `canales`
+-- Dumping data for table `miembros`
 --
 
-LOCK TABLES `canales` WRITE;
-/*!40000 ALTER TABLE `canales` DISABLE KEYS */;
-/*!40000 ALTER TABLE `canales` ENABLE KEYS */;
+LOCK TABLES `miembros` WRITE;
+/*!40000 ALTER TABLE `miembros` DISABLE KEYS */;
+/*!40000 ALTER TABLE `miembros` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -53,4 +53,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-09-06 22:40:49
+-- Dump completed on 2023-09-28 17:54:21
